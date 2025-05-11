@@ -3,16 +3,36 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  /* define a mono-font var pointing at your Nerd Font */
   --font-mono: 'JetBrains Mono', monospace;
+
+  /* Catppuccin */
+  --primary-black: rgb(17, 17, 27);
+  --primary-white: rgb(245, 224, 220);
+  --primary-text: rgb(76, 79, 105);
+
+  --secondary-black: rgb(30, 30, 46);
+  --secondary-text: rgb(166, 173, 200);
+  
+  --mauve: rgb(203, 166, 247);
+  --lavender: rgb(180, 190, 254);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  /* keep your sans if you need it, but we’ll use mono on body */
   --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-mono);
+  --font-mono: var(--font-mono);  
+
+  /* Catppuccin */
+  --color-primary-black: var(--primary-black);
+  --color-primary-white: var(--primary-white);
+  --color-primary-text: var(--primary-text);
+
+  --color-secondary-black: var(--secondary-black);
+  --color-secondary-text: var(--secondary-text);
+
+  --color-mauve: var(--mauve);
+  --color-lavender: var(--lavender);
 }
 
 @media (prefers-color-scheme: dark) {
