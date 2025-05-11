@@ -51,7 +51,7 @@ const HeroSection: React.FC = () => {
             Software Engineer
           </span>
         </div>
-        <div className="overflow-hidden mt-3 my-4 md:mb-8 text-lg">
+        <div className="overflow-hidden mt-3 my-4 md:mb-8 md:text-md lg:text-xl sm:text-lg text-center">
           <p className="scramble-text text-center mb-1">
             Talk is cheap... show me the code
           </p>

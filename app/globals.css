@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Catppuccin */
@@ -43,8 +41,8 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--color-primary-black);
+  color: var(--color-primary-white);
   /* switch body over to your Hacker/Nerd font */
   font-family: var(--font-mono);
 }
