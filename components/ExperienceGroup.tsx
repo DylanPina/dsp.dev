@@ -11,7 +11,7 @@ type Props = {
   };
 };
 
-const EduGroup: React.FC<Props> = ({ edu }) => {
+const ExperienceGroup: React.FC<Props> = ({ edu }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   // Animations
@@ -76,4 +76,4 @@ const EduGroup: React.FC<Props> = ({ edu }) => {
   );
 };
 
-export default EduGroup;
+export default ExperienceGroup;

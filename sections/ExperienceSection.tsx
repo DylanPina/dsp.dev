@@ -7,9 +7,9 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useSection } from "context/section";
 import useScrollActive from "hooks/useScrollActive";
 
-import EduGroup from "@/components/EduGroup";
+import ExperienceGroup from "@/components/ExperienceGroup";
 
-const AboutSection: React.FC = () => {
+const ExperienceSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -85,25 +85,25 @@ const AboutSection: React.FC = () => {
   const eduRef = useRef<HTMLDivElement>(null);
 
   // Set active link for about section
-  const aboutSection = useScrollActive(sectionRef);
+  const experienceSection = useScrollActive(sectionRef);
   const { onSectionChange } = useSection();
 
   useEffect(() => {
-    if (aboutSection) {
+    if (experienceSection) {
       onSectionChange?.("who am i?");
     } else {
       onSectionChange?.("");
     }
-  }, [aboutSection, onSectionChange]);
+  }, [experienceSection, onSectionChange]);
 
   return (
     <div ref={sectionRef} className="about-panel bg-secondary-black px-4">
       <section
-        id="about"
+        id="experience"
         className="flex scroll-mt-[64px] flex-col gap-8 section max-w-5xl mx-auto py-12"
       >
         <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
-          About
+          Experience
         </h2>
         <div className="flex flex-col gap-8 align-center">
           <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
@@ -122,7 +122,7 @@ const AboutSection: React.FC = () => {
               </h3>
               <div className="flex flex-col justify-center align-center gap-4">
                 {educationInfo.map((edu) => (
-                  <EduGroup edu={edu} key={edu.id} />
+                  <ExperienceGroup edu={edu} key={edu.id} />
                 ))}
               </div>
             </div>
@@ -135,7 +135,7 @@ const AboutSection: React.FC = () => {
               </h3>
               <div className="flex flex-col justify-center align-center gap-4">
                 {workInfo.map((work) => (
-                  <EduGroup edu={work} key={work.id} />
+                  <ExperienceGroup edu={work} key={work.id} />
                 ))}
               </div>
             </div>
@@ -165,7 +165,6 @@ const educationInfo = [
       "Winner of the HackRU 2024 Hackathon education track",
     ],
   },
-  ,
 ];
 
 const workInfo = [
@@ -183,4 +182,4 @@ const workInfo = [
   },
 ];
 
-export default AboutSection;
+export default ExperienceSection;
