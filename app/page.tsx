@@ -1,6 +1,7 @@
 import "./globals.css";
 import Header from "@/components/Header";
 import Loader from "@/components/Loader";
+import AboutSection from "@/sections/AboutSection";
 import HeroSection from "@/sections/HeroSection";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
           <Header />
           <main id="main">
             <HeroSection />
+            <AboutSection />
           </main>
         </div>
       </div>

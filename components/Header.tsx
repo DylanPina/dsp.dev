@@ -78,7 +78,7 @@ const Header: React.FC = () => {
     <header className="md:flex">
       <div
         ref={mainRef}
-        className={`main-nav z-30 top-0 shadow-md fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList.join(
+        className={`main-nav bg-primary-black/95 z-30 top-0 fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList.join(
           " ",
         )}`}
       >

@@ -38,11 +38,11 @@ const HeroSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative mt-16 sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 min-h-[769px] mx-auto flex flex-col justify-center items-center lg:flex-row-reverse w-full"
+      className="relative sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 h-screen min-h-[769px] mx-auto flex flex-col justify-center items-center lg:flex-row-reverse w-full"
     >
       <div className="lg:basis-2/3 z-10 relative">
         <div className="overflow-hidden">
-          <h1 className="text-animation text-center text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1">
+          <h1 className="text-animation text-center text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1 text-shadow-lg">
             Dylan Pina
           </h1>
         </div>
@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
         </div>
       </div>
       <a
-        href="#whoami"
+        href="#about"
         className="group absolute link-outline animate-bounce hidden md:bottom-14 lg:bottom-16 left-1/2 transform -translate-x-1/2 md:flex items-center flex-col"
       >
         <span className="group-hover:text-marrsgreen dark:group-hover:text-lavender">
