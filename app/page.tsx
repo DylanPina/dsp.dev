@@ -20,7 +20,9 @@ export default function Home() {
 
   return (
     <>
-      <Loader>{"dsp.dev"}</Loader>
+      <Loader>
+        dsp.<span className="text-lavender">dev</span>
+      </Loader>
       <div className="bg-primary-black overflow-hidden">
         <div className="selection:lavender">
           <Header />
