@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { ScrambleTextPlugin } from "gsap/dist/ScrambleTextPlugin";
+import SocialLinks from "@/components/SocialLinks";
 
 const HeroSection: React.FC = () => {
   const sectionRef = useRef(null);
@@ -42,12 +43,12 @@ const HeroSection: React.FC = () => {
     >
       <div className="lg:basis-2/3 z-10 relative">
         <div className="overflow-hidden">
-          <h1 className="text-animation text-center text-4xl md:text-5xl lg:text-7xl md:my-2 font-semibold my-1 text-shadow-lg">
+          <h1 className="text-animation text-center text-5xl md:text-6xl lg:text-7xl md:my-2 font-semibold my-1 text-shadow-lg">
             Dylan Pina
           </h1>
         </div>
         <div className="overflow-hidden">
-          <span className="text-animation text-center text-2xl md:text-3xl lg:text-5xl block md:my-3 text-lavender">
+          <span className="text-animation text-center text-3xl md:text-4xl lg:text-5xl block md:my-3 text-lavender">
             Software Engineer
           </span>
         </div>
@@ -56,6 +57,8 @@ const HeroSection: React.FC = () => {
             Talk is cheap... show me the code
           </p>
         </div>
+
+        <SocialLinks />
       </div>
       <a
         href="#about"
