@@ -1,10 +1,23 @@
+"use client";
+
 import "./globals.css";
 import Header from "@/components/Header";
 import Loader from "@/components/Loader";
-import ExperienceSection from "@/sections/ExperienceSection";
+import AboutSection from "@/sections/AboutSection";
 import HeroSection from "@/sections/HeroSection";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
     <>
       <Loader>{"dsp.dev"}</Loader>
@@ -13,7 +26,7 @@ export default function Home() {
           <Header />
           <main id="main">
             <HeroSection />
-            <ExperienceSection />
+            <AboutSection />
           </main>
         </div>
       </div>

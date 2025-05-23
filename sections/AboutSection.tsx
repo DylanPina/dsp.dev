@@ -9,7 +9,7 @@ import useScrollActive from "hooks/useScrollActive";
 
 import ExperienceGroup from "@/components/ExperienceGroup";
 
-const ExperienceSection: React.FC = () => {
+const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -99,18 +99,18 @@ const ExperienceSection: React.FC = () => {
   return (
     <div ref={sectionRef} className="about-panel bg-secondary-black px-4">
       <section
-        id="experience"
+        id="about"
         className="flex scroll-mt-[64px] flex-col gap-8 section max-w-5xl mx-auto py-12"
       >
         <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
-          Experience
+          About
         </h2>
         <div className="flex flex-col gap-8 align-center">
           <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
-            Software engineer at Oracle Cloud and M.S. Computer Science
-            candidate at Unversity of Texas at Austin, currently located in
-            downtown Austin. Specializing in artifical intelligence and
-            distributed systems.
+            {`Software engineer at Oracle Cloud based in Austin, TX.
+            Currently persuing a Master's in Computer Science with a focus in
+            Artifical Intelligence & Distributed Systems at University of
+            Texas at Austin.`}
           </p>
           <div className="flex flex-col gap-2">
             <div
@@ -182,4 +182,4 @@ const workInfo = [
   },
 ];
 
-export default ExperienceSection;
+export default AboutSection;

@@ -10,13 +10,13 @@ import { useSection } from "context/section";
 
 const navLinks = [
   {
-    url: "#experience",
+    url: "#about",
     svg: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
         <path d="M12 2a5 5 0 1 0 5 5 5 5 0 0 0-5-5zm0 8a3 3 0 1 1 3-3 3 3 0 0 1-3 3zm9 11v-1a7 7 0 0 0-7-7h-4a7 7 0 0 0-7 7v1h2v-1a5 5 0 0 1 5-5h4a5 5 0 0 1 5 5v1z" />
       </svg>
     ),
-    text: "Experience",
+    text: "About",
   },
   {
     url: "#projects",
@@ -26,16 +26,6 @@ const navLinks = [
       </svg>
     ),
     text: "Projects",
-  },
-  {
-    url: "#blog",
-    svg: (
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-        <path d="M19.875 3H4.125C2.953 3 2 3.897 2 5v14c0 1.103.953 2 2.125 2h15.75C21.047 21 22 20.103 22 19V5c0-1.103-.953-2-2.125-2zm0 16H4.125c-.057 0-.096-.016-.113-.016-.007 0-.011.002-.012.008L3.988 5.046c.007-.01.052-.046.137-.046h15.75c.079.001.122.028.125.008l.012 13.946c-.007.01-.052.046-.137.046z" />
-        <path d="M6 7h6v6H6zm7 8H6v2h12v-2h-4zm1-4h4v2h-4zm0-4h4v2h-4z" />
-      </svg>
-    ),
-    text: "Blog",
   },
   {
     url: "#contact",
@@ -91,16 +81,15 @@ const Header: React.FC = () => {
             <span className="text-lavender dark:text-lavender">.dev</span>
           </Link>
           <nav className="flex items-center">
-            <div className="md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
+            <div className="bg-primary-black/95 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
               <ul className="flex justify-evenly items-center py-1 text-primary-white">
                 {navLinks.map((navLink) => (
                   <li key={navLink.url}>
                     <a
                       href={navLink.url}
-                      className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-primary-white md:mr-6 md:hover:text-lavender md:dark:hover:text-lavender link-outline ${
-                        currentSection === navLink.text.toLocaleLowerCase() &&
+                      className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-primary-white md:mr-6 md:hover:text-lavender md:dark:hover:text-lavender link-outline ${currentSection === navLink.text.toLocaleLowerCase() &&
                         "text-lavender dark:text-lavender fill-lavender dark:fill-lavender"
-                      }`}
+                        }`}
                     >
                       <span className="md:hidden fill-primary-white hover:fill-primary-lavender">
                         {navLink.svg}
