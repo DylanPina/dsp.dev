@@ -171,14 +171,30 @@ const workInfo = [
   {
     id: 1,
     title: "Software Engineer",
-    subTitle: "Oracle Cloud | July 2024 - Present",
-    list: [" ", " "],
+    subTitle: "Oracle Cloud Infrastructure | Austin, TX | July 2024 - Present",
+    list: [
+      "Engineer on OCI Bastions, a tier 0 cloud security service enabling secure access to private cloud infrastructure through a zero trust architecture",
+      "Developed services for cloud security platforms and high-performance AI infrastructure",
+    ],
   },
   {
     id: 2,
     title: "Software Engineer Intern",
-    subTitle: "Oracle Cloud | June 2023 - August 2023",
-    list: [" ", " "],
+    subTitle:
+      "Oracle Cloud Infrastructure | Austin, TX | June 2023 - August 2023",
+    list: [
+      "Engineer on OCI Cloud Guard, building scalable systems for real-time threat detection, anomaly analysis, and automated remediation",
+      "Designed and developed ETL pipelines for automating data warehouse migrations with integrated anomaly detection for pipeline monitoring",
+    ],
+  },
+  {
+    id: 3,
+    title: "Software Engineer",
+    subTitle: "Inovalon | Remote | June 2022 - May 2023",
+    list: [
+      "Led the design and development of a proprietary Angular UI component library along with multiple healthcare analytics API portals, enhancing frontend consistency and accelerating product development across teams",
+      "Developed an interactive healthcare data visualization platform using AWS and modern web technologies to deliver actionable insights to clinical and operational stakeholders",
+    ],
   },
 ];
 
