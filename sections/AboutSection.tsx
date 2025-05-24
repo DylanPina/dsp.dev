@@ -184,7 +184,7 @@ const workInfo = [
       "Oracle Cloud Infrastructure | Austin, TX | June 2023 - August 2023",
     list: [
       "Engineer on OCI Cloud Guard, building scalable systems for real-time threat detection, anomaly analysis, and automated remediation",
-      "Designed and developed ETL pipelines for automating data warehouse migrations with integrated anomaly detection for pipeline monitoring",
+      "Designed and developed ETL pipelines for automating security data warehouse migrations with integrated anomaly detection for pipeline monitoring",
     ],
   },
   {
