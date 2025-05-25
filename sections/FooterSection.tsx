@@ -3,7 +3,7 @@ import { SiNeovim } from "react-icons/si";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="flex flex-col gap-6 bg-secondary-black justify-center pb-[90px] md:pb-4 text-center mt-auto">
+    <footer className="flex flex-col gap-6 justify-center p-4 py-[90px] text-center mt-auto">
       <SocialLinks />
       <div className="text-primary-white text-sm md:text-base">
         Developed in{" "}

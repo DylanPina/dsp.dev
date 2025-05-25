@@ -1,15 +1,13 @@
+import SectionHeader from "@/components/SectionHeader";
+
 const ContactSection: React.FC = () => {
   return (
     <div>
       <section
         id="contact"
-        className="flex flex-col gap-8 scroll-mt-[64px] bg-secondary-black px-4 section mx-auto py-12"
+        className="flex scroll-mt-[62px] flex-col gap-8 section max-w-5xl mx-auto p-4"
       >
-        <div className="text-center max-w-5xl mx-auto">
-          <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
-            Contact
-          </h2>
-        </div>
+        <SectionHeader title="Contact" />
         <p className="mx-auto max-w-2xl lg:leading-loose text-center">
           If you have opportunities or want to collaborate, feel free to reach
           out through email at{" "}

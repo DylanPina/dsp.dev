@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import ExperienceGroup from "@/components/ExperienceGroup";
+import SectionHeader from "@/components/SectionHeader";
 
 const AboutSection: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
@@ -81,14 +82,12 @@ const AboutSection: React.FC = () => {
   const eduRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={sectionRef} className="about-panel bg-secondary-black px-4">
+    <div ref={sectionRef} className="about-panel">
       <section
         id="about"
-        className="flex scroll-mt-[64px] flex-col gap-8 section max-w-5xl mx-auto py-12"
+        className="flex scroll-mt-[62px] flex-col gap-8 section max-w-5xl mx-auto p-4"
       >
-        <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
-          About
-        </h2>
+        <SectionHeader title="About" />
         <div className="flex flex-col gap-4 align-center">
           <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
             {`Software engineer at Oracle Cloud based in Austin, TX.

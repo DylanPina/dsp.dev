@@ -64,13 +64,13 @@ const Header: React.FC = () => {
 
   return (
     <header className="md:flex">
+      <ToastContainer />
       <div
         ref={mainRef}
         className={`main-nav bg-primary-black/95 z-30 top-0 fixed duration-400 px-4 sm:px-8 h-16 w-full ${navClassList.join(
           " ",
         )}`}
       >
-        <ToastContainer />
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
             href="/"
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
             <span className="text-lavender dark:text-lavender">.dev</span>
           </Link>
           <nav className="flex items-center">
-            <div className="bg-primary-black/95 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg md:drop-shadow-none">
+            <div className="bg-primary-black/95 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg">
               <ul className="flex justify-evenly items-center py-1 text-primary-white">
                 {navLinks.map((navLink) => (
                   <li key={navLink.url}>

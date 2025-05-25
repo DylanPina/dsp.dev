@@ -3,35 +3,36 @@
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
 
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 import rucshub from "public/projects/rucshub.webp";
 import askanon from "public/projects/askanon.webp";
 import socketchat from "public/projects/socketchat.webp";
 import paxcoins from "public/projects/paxcoins.webp";
+import SectionHeader from "@/components/SectionHeader";
 
 const ProjectSection: React.FC = () => {
+  const underlineRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(
+      underlineRef.current,
+      { width: 0 },
+      { width: "100%", delay: 1, duration: 0.4, ease: "power2.out" },
+    );
+  }, []);
+
   return (
     <section
       id="projects"
       className="flex scroll-mt-[64px] flex-col gap-8 section px-4 max-w-5xl mx-auto py-12"
     >
-      <div className="project-title text-center">
-        <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
-          Projects
-        </h2>
-      </div>
+      <SectionHeader title="Projects" />
       <div className="flex flex-wrap rounded-lg">
         {projects.map((project, index) => (
           <ProjectCard key={project.title} index={index} project={project} />
         ))}
-      </div>
-      <div className="others text-center md:mb-4">
-        Checkout some of my other projects on{" "}
-        <a
-          href="https://github.com/DylanPina"
-          className="font-medium underline link-outline whitespace-nowrap text-lavender hover:font-bold"
-        >
-          github
-        </a>
       </div>
     </section>
   );
