@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useTheme } from "next-themes";
 import gsap from "gsap";
+import { ToastContainer, toast, Bounce } from "react-toastify";
 
 import useScrollListener from "hooks/useScrollListener";
 import { useSection } from "context/section";
@@ -39,13 +39,11 @@ const navLinks = [
 ];
 
 const Header: React.FC = () => {
-  const { theme, setTheme } = useTheme();
   const { currentSection } = useSection();
   const [navClassList, setNavClassList] = useState<string[]>([]);
   const scroll = useScrollListener();
 
   const mainRef = useRef(null);
-  const themeBtnRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     gsap.fromTo(
@@ -72,6 +70,7 @@ const Header: React.FC = () => {
           " ",
         )}`}
       >
+        <ToastContainer />
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
             href="/"
@@ -103,9 +102,23 @@ const Header: React.FC = () => {
             </div>
             <button
               type="button"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+              onClick={() =>
+                toast.error(
+                  "🤨📸 Light mode attempted. We’ve notified the dark theme authorities.",
+                  {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: false,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                    theme: "dark",
+                    transition: Bounce,
+                  },
+                )
+              }
               title="Toggles light & dark theme"
-              ref={themeBtnRef}
               aria-live="polite"
               className="w-8 h-8 ml-1 rounded-lg flex justify-center items-center link-outline cursor-pointer"
             >
