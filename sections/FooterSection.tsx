@@ -5,7 +5,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="flex flex-col gap-6 bg-secondary-black justify-center pb-[90px] md:pb-4 text-center mt-auto">
       <SocialLinks />
-      <div className="text-primary-white text-xs md:text-sm">
+      <div className="text-primary-white text-sm md:text-base">
         Developed in{" "}
         <a
           className="underline text-lavender hover:font-bold cursor-pointer"

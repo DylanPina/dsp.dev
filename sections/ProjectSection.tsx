@@ -24,7 +24,7 @@ const ProjectSection: React.FC = () => {
           <ProjectCard key={project.title} index={index} project={project} />
         ))}
       </div>
-      <div className="others text-center md:mb-8">
+      <div className="others text-center md:mb-4">
         Checkout some of my other projects on{" "}
         <a
           href="https://github.com/DylanPina"

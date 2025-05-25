@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
         <h2 className="section-heading text-3xl md:text-4xl text-center font-bold">
           About
         </h2>
-        <div className="flex flex-col gap-8 align-center">
+        <div className="flex flex-col gap-4 align-center">
           <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
             {`Software engineer at Oracle Cloud based in Austin, TX.
             Currently persuing a Master's in Computer Science with a focus in
@@ -134,8 +134,9 @@ const educationInfo = [
   {
     id: 1,
     title: "Master of Science (MS) in Computer Science",
-    subTitle: "University of Texas at Austin | 2024 - 2026",
-    list: [
+    place: "University of Texas at Austin",
+    time: "2024 - 2026",
+    bullets: [
       "4.0 GPA",
       "Coursework in artificial intelligence, machine learning, and distributed systems",
     ],
@@ -143,8 +144,9 @@ const educationInfo = [
   {
     id: 2,
     title: "Bachelors of Science (BS) in Computer Science",
-    subTitle: "Rutgers University | 2021 - 2024",
-    list: [
+    place: "Rutgers University New Brunswick",
+    time: "2021 - 2024",
+    bullets: [
       "Graduated with honors",
       "Winner of the HackRU 2024 Hackathon education track",
     ],
@@ -155,8 +157,9 @@ const workInfo = [
   {
     id: 1,
     title: "Software Engineer",
-    subTitle: "Oracle Cloud Infrastructure | Austin, TX | July 2024 - Present",
-    list: [
+    place: "Oracle Cloud | Austin, TX",
+    time: "July 2024 - Present",
+    bullets: [
       "Engineer on OCI Bastions, a tier 0 cloud security service enabling secure access to private cloud infrastructure through a zero trust architecture",
       "Developed services for cloud security platforms and high-performance AI infrastructure",
     ],
@@ -164,9 +167,9 @@ const workInfo = [
   {
     id: 2,
     title: "Software Engineer Intern",
-    subTitle:
-      "Oracle Cloud Infrastructure | Austin, TX | June 2023 - August 2023",
-    list: [
+    place: "Oracle Cloud | Austin, TX",
+    time: "June 2023 - August 2023",
+    bullets: [
       "Engineer on OCI Cloud Guard, building scalable systems for real-time threat detection, anomaly analysis, and automated remediation",
       "Designed and developed ETL pipelines for automating security data warehouse migrations with integrated anomaly detection for pipeline monitoring",
     ],
@@ -174,8 +177,9 @@ const workInfo = [
   {
     id: 3,
     title: "Software Engineer",
-    subTitle: "Inovalon | Remote | June 2022 - May 2023",
-    list: [
+    place: "Inovalon | Remote",
+    time: "June 2022 - May 2023",
+    bullets: [
       "Led the design and development of a proprietary Angular UI component library along with multiple healthcare analytics API portals, enhancing frontend consistency and accelerating product development across teams",
       "Developed an interactive healthcare data visualization platform using AWS and modern web technologies to deliver actionable insights to clinical and operational stakeholders",
     ],

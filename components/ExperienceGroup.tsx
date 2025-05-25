@@ -6,8 +6,9 @@ type Props = {
   edu: {
     id: number;
     title: string;
-    subTitle: string;
-    list: string[];
+    place: string;
+    time: string;
+    bullets: string[];
   };
 };
 
@@ -59,14 +60,15 @@ const ExperienceGroup: React.FC<Props> = ({ edu }) => {
           {edu.title}
         </h3>
       </div>
-      <div className="overflow-hidden">
-        <span className={`edu-info text-slate-500 italic`}>{edu.subTitle}</span>
+      <div className="max-sm:flex flex-col overflow-hidden edu-info text-slate-500 italic">
+        <span>{edu.place}</span> <span className="max-sm:hidden">{` | `}</span>
+        <span>{edu.time}</span>
       </div>
       <ul
         role="list"
         className=" marker:text-lavender list-disc pl-6 space-y-1 mt-1"
       >
-        {edu.list.map((li) => (
+        {edu.bullets.map((li) => (
           <li key={li} className={`edu-list`}>
             {li}
           </li>
