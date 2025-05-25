@@ -34,11 +34,17 @@ const SocialLinks: React.FC<{ page?: string }> = () => {
     <div className="flex items-center justify-center">
       <div className="flex gap-4" ref={containerRef}>
         {socialLinks.map((social) => (
-          <a key={social.id} title={social.title} href={social.link}>
-            {React.cloneElement(social.svg, {
-              className:
-                "text-4xl lg:text-5xl text-white transition duration-300",
-            })}
+          <a
+            key={social.id}
+            title={social.title}
+            href={social.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group"
+          >
+            <span className="text-4xl lg:text-5xl text-white transition duration-300 transform inline-block group-hover:text-lavender group-hover:scale-110 hover:animate-bounce">
+              {social.svg}
+            </span>
           </a>
         ))}
       </div>

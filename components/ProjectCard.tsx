@@ -53,8 +53,14 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
       )
       .fromTo(
         q(".project-tags"),
-        { y: -40 },
-        { y: 0, stagger: 0.1, ease: "Elastic.easeOut" },
+        { opacity: 0, y: 10 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.3,
+          stagger: 0.05,
+          ease: "Power2.easeOut",
+        },
         "<25%",
       );
   }, []);
