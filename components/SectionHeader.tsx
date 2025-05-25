@@ -22,11 +22,10 @@ export default function SectionHeader({ title }: Props) {
       {
         scaleX: 1,
         transformOrigin: "left",
+        delay: 0.4,
         duration: 0.7,
-        delay: 1,
         ease: "power2.out",
         scrollTrigger: {
-          start: "top 100%",
           trigger: headerRef.current,
           toggleActions: "play none none none",
         },

@@ -89,7 +89,7 @@ const AboutSection: React.FC = () => {
       >
         <SectionHeader title="About" />
         <div className="flex flex-col gap-4 align-center">
-          <p className="col-start-1 col-end-3 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
+          <p className="col-start-1 col-end-3 md:text-lg text-md row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
             {`Software engineer at Oracle Cloud based in Austin, TX.
             Currently persuing a Master's in Computer Science with a focus in
             Artifical Intelligence & Distributed Systems at University of

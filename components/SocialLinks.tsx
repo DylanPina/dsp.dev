@@ -10,6 +10,8 @@ const SocialLinks: React.FC<{ page?: string }> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!containerRef.current) return;
+
     gsap.fromTo(
       containerRef.current?.children,
       {
@@ -77,7 +79,6 @@ const socialLinks = [
     link: "mailto:dylansp.dev@gmail.com",
     svg: <IoIosMail />,
   },
-  ,
 ];
 
 export default SocialLinks;
