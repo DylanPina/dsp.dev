@@ -3,10 +3,6 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-
-import { useSection } from "context/section";
-import useScrollActive from "hooks/useScrollActive";
-
 import ExperienceGroup from "@/components/ExperienceGroup";
 
 const AboutSection: React.FC = () => {
@@ -83,18 +79,6 @@ const AboutSection: React.FC = () => {
   }, []);
 
   const eduRef = useRef<HTMLDivElement>(null);
-
-  // Set active link for about section
-  const experienceSection = useScrollActive(sectionRef);
-  const { onSectionChange } = useSection();
-
-  useEffect(() => {
-    if (experienceSection) {
-      onSectionChange?.("who am i?");
-    } else {
-      onSectionChange?.("");
-    }
-  }, [experienceSection, onSectionChange]);
 
   return (
     <div ref={sectionRef} className="about-panel bg-secondary-black px-4">

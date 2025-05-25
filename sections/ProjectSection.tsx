@@ -24,11 +24,11 @@ const ProjectSection: React.FC = () => {
           <ProjectCard key={project.title} index={index} project={project} />
         ))}
       </div>
-      <div className="others text-center mb-16">
+      <div className="others text-center md:mb-8">
         Checkout some of my other projects on{" "}
         <a
           href="https://github.com/DylanPina"
-          className="font-medium underline link-outline whitespace-nowrap hover:text-lavender hover:font-bold"
+          className="font-medium underline link-outline whitespace-nowrap text-lavender hover:font-bold"
         >
           github
         </a>
@@ -95,7 +95,14 @@ const projects = [
       />
     ),
     desc: "Web-based messaging platform that uses web sockets for bidirectional low-latency communication",
-    tags: ["React", "Typescript", "Node.js", "Express", "MongoDB", "Socket.io"],
+    tags: [
+      "React",
+      "Typescript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Web Sockets",
+    ],
     liveUrl: "https://github.com/DylanPina/SocketChat",
     codeUrl: "https://github.com/DylanPina/SocketChat",
     bgColor: "",
