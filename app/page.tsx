@@ -5,6 +5,7 @@ import Header from "@/components/Header";
 import Loader from "@/components/Loader";
 import AboutSection from "@/sections/AboutSection";
 import ContactSection from "@/sections/ContactSection";
+import FooterSection from "@/sections/FooterSection";
 import HeroSection from "@/sections/HeroSection";
 import ProjectSection from "@/sections/ProjectSection";
 import { useEffect } from "react";
@@ -34,6 +35,7 @@ export default function Home() {
             <ProjectSection />
             <ContactSection />
           </main>
+          <FooterSection />
         </div>
       </div>
     </>

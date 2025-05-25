@@ -156,7 +156,7 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
             </div>
           </div>
         </div>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden md:min-h-[74px]">
           <p className="project-desc">{project.desc}</p>
         </div>
         <ul

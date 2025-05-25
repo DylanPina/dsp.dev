@@ -94,7 +94,7 @@ const projects = [
         className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-125 object-cover"
       />
     ),
-    desc: "Web-based messaging platform that uses web sockets for bidirectional low-latency communication",
+    desc: "Web-based messaging platform that uses web sockets for bidirectional low-latency communication.",
     tags: [
       "React",
       "Typescript",
@@ -119,7 +119,7 @@ const projects = [
         className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-125 object-cover"
       />
     ),
-    desc: "Crytocurrency analytics dashboard",
+    desc: "Crytocurrency analytics dashboard.",
     tags: ["React", "Firebase", "Google Cloud"],
     liveUrl: "https://github.com/DylanPina/PaxCoins",
     codeUrl: "https://github.com/DylanPina/PaxCoins",

@@ -15,8 +15,8 @@ const ContactSection: React.FC = () => {
             Contact
           </h2>
         </div>
-        <div className="mt-8 mb-20">
-          <p className="mb-6 mx-auto max-w-2xl md:mb-10 lg:leading-loose text-center">
+        <div className="mt-8">
+          <p className="mx-auto max-w-2xl lg:leading-loose text-center">
             If you have opportunities or want to collaborate, feel free to reach
             out through email at{" "}
             <a

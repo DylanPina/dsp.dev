@@ -4,6 +4,7 @@ import React, { useRef, useEffect } from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import gsap from "gsap";
+import { FaDiscord } from "react-icons/fa";
 
 const SocialLinks: React.FC<{ page?: string }> = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,10 +61,17 @@ const socialLinks = [
   },
   {
     id: 3,
+    title: "Dylan Pina's Discord Profile",
+    link: "https://discord.com/users/330155644743057408",
+    svg: <FaDiscord />,
+  },
+  {
+    id: 4,
     title: "Dylan Pina's Gmail",
     link: "mailto:dylansp.dev@gmail.com",
     svg: <IoIosMail />,
   },
+  ,
 ];
 
 export default SocialLinks;
