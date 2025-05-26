@@ -61,21 +61,17 @@ class InfraStack(Stack):
                 viewer_protocol_policy=cloudfront.ViewerProtocolPolicy.REDIRECT_TO_HTTPS,
             ),
             certificate=certificate,
-            domain_names=["www.dylansp.dev"],
+            domain_names=[domain_name],
             default_root_object="index.html",
         )
 
-        # Allow CloudFront to access the S3 bucket
+        # Allow public read access to all objects in the S3 bucket
         site_bucket.add_to_resource_policy(
             iam.PolicyStatement(
                 actions=["s3:GetObject"],
                 resources=[site_bucket.arn_for_objects("*")],
-                principals=[iam.ServicePrincipal("cloudfront.amazonaws.com")],
-                conditions={
-                    "StringEquals": {
-                        "AWS:SourceArn": f"arn:aws:cloudfront::{self.account}:distribution/{distribution.distribution_id}"
-                    }
-                },
+                principals=[iam.AnyPrincipal()],
+                effect=iam.Effect.ALLOW,
             )
         )
 
@@ -84,7 +80,7 @@ class InfraStack(Stack):
             self,
             "AliasRecord",
             zone=zone,
-            record_name="www",  # Creates www.dsp.dev
+            record_name="www",  # Creates www.dylansp.dev
             target=route53.RecordTarget.from_alias(
                 targets.CloudFrontTarget(distribution)
             ),
