@@ -86,10 +86,9 @@ const Header: React.FC = () => {
                   <li key={navLink.url}>
                     <a
                       href={navLink.url}
-                      className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-primary-white md:mr-6 md:hover:text-lavender md:dark:hover:text-lavender link-outline ${
-                        currentSection === navLink.text.toLocaleLowerCase() &&
+                      className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-primary-white md:mr-6 md:hover:text-lavender md:dark:hover:text-lavender link-outline ${currentSection === navLink.text.toLocaleLowerCase() &&
                         "text-lavender dark:text-lavender fill-lavender dark:fill-lavender"
-                      }`}
+                        }`}
                     >
                       <span className="md:hidden fill-primary-white hover:fill-primary-lavender">
                         {navLink.svg}
@@ -103,20 +102,17 @@ const Header: React.FC = () => {
             <button
               type="button"
               onClick={() =>
-                toast.error(
-                  "🤨📸 Light mode attempted. We’ve notified the dark theme authorities.",
-                  {
-                    position: "top-center",
-                    autoClose: 5000,
-                    hideProgressBar: false,
-                    closeOnClick: false,
-                    pauseOnHover: true,
-                    draggable: true,
-                    progress: undefined,
-                    theme: "dark",
-                    transition: Bounce,
-                  },
-                )
+                toast.error("Light mode? Seriously? 🤨", {
+                  position: "top-center",
+                  autoClose: 5000,
+                  hideProgressBar: false,
+                  closeOnClick: false,
+                  pauseOnHover: true,
+                  draggable: true,
+                  progress: undefined,
+                  theme: "dark",
+                  transition: Bounce,
+                })
               }
               title="Toggles light & dark theme"
               aria-live="polite"

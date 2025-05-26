@@ -39,11 +39,11 @@ const HeroSection: React.FC = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative sm:mt-8 pt-8 lg:pt-0 px-4 sm:px-8 md:px-20 max-w-5xl sm:pb-24 h-screen min-h-[769px] mx-auto flex flex-col justify-center items-center lg:flex-row-reverse w-full"
+      className="relative px-4 max-w-5xl h-screen min-h-[769px] mx-auto flex flex-col justify-center items-center w-full"
     >
-      <div className="lg:basis-2/3 z-10 relative">
+      <div className="z-10 relative">
         <div className="overflow-hidden">
-          <h1 className="text-animation text-center text-5xl md:text-6xl lg:text-7xl md:my-2 font-semibold my-1 text-shadow-lg">
+          <h1 className="text-animation text-center text-5xl md:text-6xl lg:text-7xl font-semibold text-shadow-lg">
             Dylan Pina
           </h1>
         </div>
