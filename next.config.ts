@@ -1,7 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  devIndicators: false
+const nextConfig = {
+  output: "export",
 };
 
-export default nextConfig;
+module.exports = nextConfig;
