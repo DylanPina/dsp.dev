@@ -7,6 +7,7 @@
   --primary-black: rgb(17, 17, 27);
   --primary-white: rgb(250, 250, 250);
   --primary-text: rgb(76, 79, 105);
+  --subtext: rgb(186, 194, 222);
 
   --secondary-black: rgb(30, 30, 46);
   --secondary-text: rgb(166, 173, 200);
@@ -29,6 +30,7 @@ html {
   --color-primary-black: var(--primary-black);
   --color-primary-white: var(--primary-white);
   --color-primary-text: var(--primary-text);
+  --color-subtext: var(--subtext);
 
   --color-secondary-black: var(--secondary-black);
   --color-secondary-text: var(--secondary-text);

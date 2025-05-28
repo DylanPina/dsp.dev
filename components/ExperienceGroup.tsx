@@ -56,11 +56,11 @@ const ExperienceGroup: React.FC<Props> = ({ edu }) => {
   return (
     <div className="edu-group mb-4" ref={sectionRef}>
       <div className="overflow-hidden">
-        <h3 className={`edu-heading text-lavender text-lg font-bold`}>
+        <h3 className={`edu-heading text-lavender text-xl font-bold`}>
           {edu.title}
         </h3>
       </div>
-      <div className="max-sm:flex flex-col overflow-hidden edu-info text-slate-500 italic">
+      <div className="max-sm:flex flex-col text-lg overflow-hidden edu-info text-subtext">
         <span>{edu.place}</span> <span className="max-sm:hidden">{` | `}</span>
         <span>{edu.time}</span>
       </div>

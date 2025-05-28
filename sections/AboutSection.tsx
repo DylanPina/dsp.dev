@@ -100,9 +100,9 @@ const AboutSection: React.FC = () => {
               className="flex flex-col gap-3 align-center lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:ml-8 lg:mt-auto"
               ref={eduRef}
             >
-              <h3 className="edu-bg my-4 text-xl md:text-2xl font-bold">
+              <h2 className="edu-bg my-4 text-2xl md:text-2xl font-bold">
                 Education
-              </h3>
+              </h2>
               <div className="flex flex-col justify-center align-center gap-4">
                 {educationInfo.map((edu) => (
                   <ExperienceGroup edu={edu} key={edu.id} />
@@ -113,9 +113,9 @@ const AboutSection: React.FC = () => {
               className="flex flex-col gap-3 align-center lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:ml-8 lg:mt-auto"
               ref={eduRef}
             >
-              <h3 className="edu-bg my-4 text-xl md:text-2xl font-bold">
+              <h2 className="edu-bg my-4 text-2xl md:text-2xl font-bold">
                 Work Experience
-              </h3>
+              </h2>
               <div className="flex flex-col justify-center align-center gap-4">
                 {workInfo.map((work) => (
                   <ExperienceGroup edu={work} key={work.id} />
