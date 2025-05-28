@@ -73,11 +73,15 @@ const Header: React.FC = () => {
       >
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
-            href="/"
-            className="text-primary-white text-xl sm:text-2xl md:hover:text-lavender dark:md:hover:text-lavender focus-visible:outline-lavender "
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="text-primary-white text-xl hover:font-semibold sm:text-2xl hover:text-shadow-primary-white hover:text-shadow-lavender transition duration-700 ease-in-out "
           >
             dsp
-            <span className="text-lavender dark:text-lavender">.dev</span>
+            <span className="text-lavender">.dev</span>
           </Link>
           <nav className="flex items-center">
             <div className="bg-primary-black/95 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg">

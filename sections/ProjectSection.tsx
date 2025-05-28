@@ -26,7 +26,7 @@ const ProjectSection: React.FC = () => {
   return (
     <section
       id="projects"
-      className="flex scroll-mt-[64px] flex-col gap-8 section px-4 max-w-5xl mx-auto py-12"
+      className="flex scroll-mt-[68px] flex-col gap-8 section max-w-5xl mx-auto py-8 px-4"
     >
       <SectionHeader title="Projects" />
       <div className="flex flex-wrap rounded-lg">

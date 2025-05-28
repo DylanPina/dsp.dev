@@ -5,7 +5,7 @@ const ContactSection: React.FC = () => {
     <div>
       <section
         id="contact"
-        className="flex scroll-mt-[62px] flex-col gap-8 section max-w-5xl mx-auto p-4"
+        className="flex scroll-mt-[68px] flex-col gap-8 section max-w-5xl mx-auto py-8 px-4"
       >
         <SectionHeader title="Contact" />
         <p className="mx-auto max-w-2xl lg:leading-loose text-center">

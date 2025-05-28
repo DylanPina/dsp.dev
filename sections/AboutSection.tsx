@@ -85,22 +85,22 @@ const AboutSection: React.FC = () => {
     <div ref={sectionRef} className="about-panel">
       <section
         id="about"
-        className="flex scroll-mt-[62px] flex-col gap-8 section max-w-5xl mx-auto p-4"
+        className="flex scroll-mt-[68px] flex-col gap-8 section max-w-5xl mx-auto py-8 px-4"
       >
         <SectionHeader title="About" />
-        <div className="flex flex-col gap-4 align-center">
-          <p className="col-start-1 col-end-3 md:text-lg text-md row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
-            {`Software engineer at Oracle Cloud based in Austin, TX.
+        <p className="col-start-1 col-end-3 md:text-lg/6 text-md/6 row-start-4 row-end-6 lg:lg:row-start-1 lg:row-end-2 lg:col-start-3 lg:col-end-6 lg:ml-8 lg:mt-auto about-intro sm:text-center">
+          {`Software engineer at Oracle Cloud based in Austin, TX.
             Currently persuing a Master's in Computer Science with a focus in
             Artifical Intelligence & Distributed Systems at University of
             Texas at Austin.`}
-          </p>
-          <div className="flex flex-col gap-2">
+        </p>
+        <div className="flex flex-col gap-8 align-center">
+          <div className="flex flex-col gap-4 md:gap-8">
             <div
               className="flex flex-col gap-3 align-center lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:ml-8 lg:mt-auto"
               ref={eduRef}
             >
-              <h2 className="edu-bg my-4 text-2xl md:text-2xl font-bold">
+              <h2 className="edu-bg my-4 text-xl md:text-2xl font-bold">
                 Education
               </h2>
               <div className="flex flex-col justify-center align-center gap-4">
@@ -113,7 +113,7 @@ const AboutSection: React.FC = () => {
               className="flex flex-col gap-3 align-center lg:col-start-1 lg:col-end-3 lg:row-start-1 lg:row-end-2 lg:ml-8 lg:mt-auto"
               ref={eduRef}
             >
-              <h2 className="edu-bg my-4 text-2xl md:text-2xl font-bold">
+              <h2 className="edu-bg my-4 text-xl md:text-2xl font-bold">
                 Work Experience
               </h2>
               <div className="flex flex-col justify-center align-center gap-4">

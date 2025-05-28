@@ -56,11 +56,13 @@ const ExperienceGroup: React.FC<Props> = ({ edu }) => {
   return (
     <div className="edu-group mb-4" ref={sectionRef}>
       <div className="overflow-hidden">
-        <h3 className={`edu-heading text-lavender text-xl font-bold`}>
+        <h3
+          className={`edu-heading text-lavender text-lg md:text-xl font-bold`}
+        >
           {edu.title}
         </h3>
       </div>
-      <div className="max-sm:flex flex-col text-lg overflow-hidden edu-info text-subtext">
+      <div className="max-sm:flex flex-col text-md md:text-lg overflow-hidden edu-info text-subtext">
         <span>{edu.place}</span> <span className="max-sm:hidden">{` | `}</span>
         <span>{edu.time}</span>
       </div>
@@ -69,7 +71,7 @@ const ExperienceGroup: React.FC<Props> = ({ edu }) => {
         className=" marker:text-lavender list-disc pl-6 space-y-1 mt-1"
       >
         {edu.bullets.map((li) => (
-          <li key={li} className={`edu-list`}>
+          <li key={li} className={`edu-list text-base/7`}>
             {li}
           </li>
         ))}

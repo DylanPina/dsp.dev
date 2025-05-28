@@ -163,7 +163,7 @@ const ProjectCard: React.FC<Props> = ({ index, project }) => {
           </div>
         </div>
         <div className="overflow-hidden md:min-h-[74px]">
-          <p className="project-desc">{project.desc}</p>
+          <p className="project-desc text-base/6">{project.desc}</p>
         </div>
         <ul
           aria-label={`Tech Stack used in ${project.title}`}
