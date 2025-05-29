@@ -17,16 +17,16 @@ const SocialLinks: React.FC<{ page?: string }> = () => {
       {
         opacity: 0,
         y: 20,
-        scale: 0.9,
-        delay: 1,
+        scale: 0.7,
+        delay: 1.5,
       },
       {
         opacity: 1,
         y: 0,
         scale: 1,
-        duration: 0.6,
-        stagger: 0.2,
-        delay: 1,
+        duration: 0.75,
+        stagger: 0.25,
+        delay: 1.3,
         ease: "power2.out",
       },
     );

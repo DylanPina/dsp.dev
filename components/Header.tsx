@@ -49,7 +49,7 @@ const Header: React.FC = () => {
     gsap.fromTo(
       mainRef.current,
       { top: -120 },
-      { top: 0, duration: 0.7, delay: 0.75, ease: "Power0.easeNone" },
+      { top: 0, duration: 1, delay: 1, ease: "Power0.easeNone" },
     );
   }, []);
 

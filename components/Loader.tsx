@@ -21,11 +21,11 @@ const Loader: React.FC<Props> = ({ children }) => {
 
     // 2) Build timeline
     const tl = gsap.timeline({
-      defaults: { duration: 0.6, ease: "power2.out" },
+      defaults: { duration: 0.9, ease: "power2.out" },
     });
     tl.to(q(".loading-text"), { opacity: 1, y: -10 }, /* at time=0 */ 0)
       .to(q(".white-bg"), { y: "-100%" })
-      .to(q(".dark-bg"), { y: "-100%", duration: 0.6 }, "-=0.6");
+      .to(q(".dark-bg"), { y: "-100%", duration: 0.9 }, "-=0.9");
 
     return () => {
       tl.kill();

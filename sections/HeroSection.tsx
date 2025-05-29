@@ -22,17 +22,17 @@ const HeroSection: React.FC = () => {
       y: 350,
     });
 
-    const tl = gsap.timeline({ defaults: { stagger: 0.2, duration: 0.3 } });
-    tl.fromTo(q(".text-animation"), { y: 100 }, { y: 0, delay: 0.75 });
+    const tl = gsap.timeline({ defaults: { stagger: 0.35, duration: 0.5 } });
+    tl.fromTo(q(".text-animation"), { y: 100 }, { y: 0, delay: 1.1 });
 
     gsap.to(q(".scramble-text"), {
       scrambleText: {
         text: "Talk is cheap... show me the code",
         chars: "0123456789ABCDEF",
-        speed: 0.4,
-        revealDelay: 0.8,
+        speed: 0.7,
+        revealDelay: 1.3,
       },
-      duration: 1.5,
+      duration: 2.7,
     });
   }, [q]);
 
