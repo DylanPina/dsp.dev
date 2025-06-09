@@ -46,8 +46,9 @@ const projects = [
       <Image
         src={rucshub}
         sizes="100vw"
+        fill
         alt="RUCS Hub"
-        className="transition-transform duration-500 scale-75 max-w-50 my-auto justify-center center m-auto hover:scale-90 object-cover"
+        className="transition-transform duration-500 rounded-lg hover:scale-110 "
       />
     ),
     desc: "Platform for Rutgers University students to share reviews and ratings for their courses and professors.",
@@ -73,6 +74,7 @@ const projects = [
       <Image
         src={askanon}
         sizes="100vw"
+        fill
         alt="AskAnon"
         className="transition-transform duration-500 max-w-50 justify-center center m-auto hover:scale-125 object-cover"
       />
@@ -92,7 +94,7 @@ const projects = [
         src={socketchat}
         sizes="100vw"
         alt="SocketChat"
-        className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-125 object-cover"
+        className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-110 object-cover"
       />
     ),
     desc: "Web-based messaging platform that uses web sockets for bidirectional low-latency communication.",
@@ -117,7 +119,7 @@ const projects = [
         src={paxcoins}
         sizes="100vw"
         alt="PaxCoins"
-        className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-125 object-cover"
+        className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-110 object-cover"
       />
     ),
     desc: "Crytocurrency analytics dashboard.",
