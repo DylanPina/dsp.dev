@@ -1,5 +1,4 @@
 import SocialLinks from "@/components/SocialLinks";
-import { SiNeovim } from "react-icons/si";
 
 const Footer: React.FC = () => {
   return (
