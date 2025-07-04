@@ -10,7 +10,7 @@ const StyledLink = ({
   <a
     href={href}
     className={clsx(
-      "text-blue-600 hover:text-blue-800 hover:underline font-medium",
+      "underline text-lavender hover:font-bold cursor-pointer",
       className,
     )}
     {...props}
@@ -18,5 +18,6 @@ const StyledLink = ({
     {children}
   </a>
 );
+
 
 export default StyledLink;
