@@ -4,11 +4,12 @@ import React, { createContext, useContext, useState } from "react";
 
 interface FilterInitialType {
   searchText: string;
-  onSearch?: (val: string) => void;
+  onSearch: (val: string) => void;
 }
 
 export const filterContext = createContext<FilterInitialType>({
   searchText: "",
+  onSearch: () => {},
 });
 
 export const ProvideFilter = ({ children }: { children: React.ReactNode }) => {
