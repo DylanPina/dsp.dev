@@ -1,9 +1,8 @@
 "use client";
 
-import "./globals.css";
+import "../globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Header from "@/components/Header";
-import Loader from "@/components/Loader";
 import FooterSection from "@/sections/FooterSection";
 import { useEffect } from "react";
 
@@ -37,16 +36,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Loader>
-          dsp.<span className="text-lavender">dev</span>
-        </Loader>
         <div className="bg-primary-black overflow-hidden min-h-screen flex flex-col">
           <div className="selection:lavender flex flex-col min-h-screen">
-            <Header />
+            <Header animationDelay={0.1} animationDuration={0.5} />
             <main id="main" className="flex-1">
               {children}
             </main>
-            <FooterSection />
+            <FooterSection animationDelay={0.1} animationDuration={0.5} />
           </div>
         </div>
       </body>

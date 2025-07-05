@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import Link from "next/link";
-import DateTime from "@/components/DateTime";
+import DateTime from "@/components/blog/DateTime";
 
 type Props = {
   post: {

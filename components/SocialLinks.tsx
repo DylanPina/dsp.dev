@@ -6,7 +6,12 @@ import { IoIosMail } from "react-icons/io";
 import gsap from "gsap";
 import { FaDiscord } from "react-icons/fa";
 
-const SocialLinks: React.FC<{ page?: string }> = () => {
+interface Props {
+  animationDelay: number
+  animationDuration?: number
+}
+
+const SocialLinks: React.FC<Props> = ({animationDelay, animationDuration}) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -18,7 +23,7 @@ const SocialLinks: React.FC<{ page?: string }> = () => {
         opacity: 0,
         y: 20,
         scale: 0.7,
-        delay: 1.5,
+        delay: animationDuration,
       },
       {
         opacity: 1,
@@ -26,11 +31,11 @@ const SocialLinks: React.FC<{ page?: string }> = () => {
         scale: 1,
         duration: 0.75,
         stagger: 0.25,
-        delay: 1.3,
+        delay: animationDuration,
         ease: "power2.out",
       },
     );
-  }, []);
+  }, [animationDelay, animationDuration]);
 
   return (
     <div className="flex items-center justify-center">

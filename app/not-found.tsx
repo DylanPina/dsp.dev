@@ -1,35 +1,43 @@
-import type { NextPage } from "next";
+"use client";
 
+import "./globals.css";
+import Header from "@/components/Header";
+import Loader from "@/components/Loader";
+import AboutSection from "@/sections/AboutSection";
+import ContactSection from "@/sections/ContactSection";
 import FooterSection from "@/sections/FooterSection";
-import StyledLink from "@/components/StyledLink";
+import HeroSection from "@/sections/HeroSection";
+import ProjectSection from "@/sections/ProjectSection";
+import { useEffect } from "react";
 
-const Home: NextPage = () => {
+export default function Home() {
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, []);
+
   return (
     <>
-      <div className="bg-bglight dark:bg-bgdark overflow-hidden">
-        <div className="h-screen flex flex-col justify-center">
-          <div className="flex justify-center items-center flex-col mt-auto">
-            <h1 className="text-8xl xs:text-9xl font-bold text-marrsgreen dark:text-carrigreen">
-              404
-            </h1>
-            <div className="text-lg xs:text-2xl my-2">
-              Page Not Found :&apos;&#40;
-            </div>
-            <div className="max-w-xs text-center mt-2 mb-10">
-              It seems the page you&apos;re looking for does not exist, or there
-              might be a typo in the URL.
-            </div>
-            <div className="flex space-x-4">
-              <StyledLink href="/" className="text-lg">
-                Go back Home
-              </StyledLink>
-            </div>
-          </div>
+      <Loader>
+        dsp.<span className="text-lavender">dev</span>
+      </Loader>
+      <div className="bg-primary-black overflow-hidden">
+        <div className="selection:lavender">
+          <Header />
+          <main id="main">
+            <HeroSection />
+            <AboutSection />
+            <ProjectSection />
+            <ContactSection />
+          </main>
           <FooterSection />
         </div>
       </div>
     </>
   );
-};
-
-export default Home;
+}

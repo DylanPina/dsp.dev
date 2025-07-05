@@ -48,7 +48,12 @@ const navLinks = [
   },
 ];
 
-const Header: React.FC = () => {
+interface Props {
+  animationDelay?: number
+  animationDuration?: number
+}
+
+const Header: React.FC<Props> = ({animationDelay, animationDuration}) => {
   const { currentSection } = useSection();
   const [navClassList, setNavClassList] = useState<string[]>([]);
   const scroll = useScrollListener();
@@ -59,9 +64,9 @@ const Header: React.FC = () => {
     gsap.fromTo(
       mainRef.current,
       { top: -120 },
-      { top: 0, duration: 1, delay: 1, ease: "Power0.easeNone" },
+      { top: 0, duration: animationDuration ?? 0, delay: animationDelay ?? 0, ease: "Power0.easeNone" },
     );
-  }, []);
+  }, [animationDelay, animationDuration]);
 
   useEffect(() => {
     const _classList = [];
@@ -83,7 +88,7 @@ const Header: React.FC = () => {
       >
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           <Link
-            href="#"
+            href="/"
             onClick={(e) => {
               e.preventDefault();
               window.scrollTo({ top: 0, behavior: "smooth" });
