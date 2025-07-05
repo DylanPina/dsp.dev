@@ -22,7 +22,7 @@ const BlogHeroSection: React.FC = () => {
                     block bg-cardlight dark:bg-carddark w-full rounded shadow-md
                     border border-cardlight dark:border-carddark border-opacity-40 
                     focus:outline-none focus:border-marrslight focus:dark:border-carrilight"
-          placeholder="Search for anything..."
+          placeholder="Search..."
           type="text"
           name="search"
           defaultValue={searchText}

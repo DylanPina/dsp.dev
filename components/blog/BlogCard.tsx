@@ -23,9 +23,9 @@ const BlogCard: React.FC<Props> = ({ post }) => {
       <div className="overflow-hidden">
         <Link
           href={`/blog/posts/${slug}`}
-          className="blog-title link inline-block outline-none dark:outline-none focus-within:underline"
+          className="blog-title link inline-block outline-none dark:outline-none focus-within:underline hover:font-bold"
         >
-          <h3 className="text-lg font-medium">{title}</h3>
+          <h3 className="text-lg text-lavender font-medium hover:font-bold">{title}</h3>
         </Link>
       </div>
       <div className="overflow-hidden">
