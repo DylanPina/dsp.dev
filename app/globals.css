@@ -52,3 +52,7 @@ body {
   /* switch body over to your Hacker/Nerd font */
   font-family: var(--font-mono);
 }
+
+.strike-through {
+  text-decoration: line-through;
+}

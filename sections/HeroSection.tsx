@@ -58,7 +58,7 @@ const HeroSection: React.FC = () => {
           </p>
         </div>
 
-        <SocialLinks />
+        <SocialLinks animationDelay={1} animationDuration={1} />
       </div>
       <a
         href="#about"

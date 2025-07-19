@@ -13,9 +13,7 @@ const BlogHeroSection: React.FC = () => {
     <section
       className="flex flex-col gap-4 py-4 pt-20 md:pt-24 px-4 sm:px-8 md:px-20 max-w-4xl mx-auto"
     >
-      <h1 className="main-header text-4xl lg:text-5xl text-center font-bold">
-        Blog
-      </h1>
+      <p className="text-md md:text-lg text-center font-normal">Welcome to my blog where I yap about software, career, AI, and occasionally have an existential crisis</p>
       <label className="relative block my-4">
         <input
           className="placeholder:italic placeholder:text-opacity-75 py-3 pr-14 pl-5 

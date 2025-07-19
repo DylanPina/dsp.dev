@@ -16,9 +16,11 @@ interface Props {
   }[]
   animationDelay?: number
   animationDuration?: number
+  mobileNav?: boolean
 }
 
-const Header: React.FC<Props> = ({title, navLinks = [], animationDelay, animationDuration}) => {
+
+const Header: React.FC<Props> = ({title, navLinks = [], animationDelay, animationDuration, mobileNav = false}) => {
   const { currentSection } = useSection();
   const [navClassList, setNavClassList] = useState<string[]>([]);
   const scroll = useScrollListener();
@@ -54,17 +56,17 @@ const Header: React.FC<Props> = ({title, navLinks = [], animationDelay, animatio
         <div className="w-full h-full mx-auto max-w-6xl flex items-center justify-between">
           {title}
           <nav className="flex items-center">
-            <div className="bg-primary-black/95 md:bg-transparent md:dark:bg-transparent md:backdrop-blur-none fixed md:static bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg">
+            <div className={`bg-primary-black/95 md:backdrop-blur-none fixed ${mobileNav ? "md:bg-transparent md:static" : "md:hidden"} bottom-4 z-30 left-1/2 md:left-auto transform max-md:-translate-x-1/2 md:transform-none bg-bglight dark:bg-carddark dark:text-primary-white w-11/12 rounded drop-shadow-lg`}>
               <ul className="flex justify-evenly items-center py-1 text-primary-white">
                 {navLinks.map((navLink) => (
-                  <li key={navLink.url}>
+                  <li className={`${!mobileNav && "max-md:hidden"}`} key={navLink.url}>
                     <a
                       href={navLink.url}
                       className={`text-sm md:text-lg flex flex-col items-center w-[4.5rem] md:w-auto dark:fill-primary-white md:mr-6 md:hover:text-lavender md:dark:hover:text-lavender link-outline ${currentSection === navLink.text.toLocaleLowerCase() &&
                         "text-lavender dark:text-lavender fill-lavender dark:fill-lavender"
                         }`}
                     >
-                      <span className="md:hidden fill-primary-white hover:fill-primary-lavender">
+                      <span className={`${mobileNav ? "md:hidden" : "hidden"} fill-primary-white hover:fill-primary-lavender`}>
                         {navLink.svg}
                       </span>
                       <span className="whitespace-nowrap">{navLink.text}</span>

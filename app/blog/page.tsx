@@ -1,6 +1,6 @@
 "use client";
-import type { NextPage } from "next";
 
+import type { NextPage } from "next";
 import { useFilter } from "context/filter";
 import BlogHeroSection from "@/components/blog/BlogHeroSection";
 import BlogCard from "@/components/blog/BlogCard";

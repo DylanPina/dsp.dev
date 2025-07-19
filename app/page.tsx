@@ -87,14 +87,14 @@ export default function Home() {
         </Loader>
         <div className="bg-primary-black overflow-hidden min-h-screen flex flex-col">
           <div className="selection:lavender flex flex-col min-h-screen">
-            <Header title={headerTitle} navLinks={navLinks} animationDelay={1} animationDuration={1} />
+            <Header title={headerTitle} mobileNav={true} navLinks={navLinks} animationDelay={1} animationDuration={1} />
             <main id="main">
               <HeroSection />
               <AboutSection />
               <ProjectSection />
               <ContactSection />
             </main>
-            <FooterSection animationDelay={1} animationDuration={1}/>
+            <FooterSection text={<span className="text-primary-white text-xs md:text-sm">Developed in <a className="underline text-lavender hover:font-bold cursor-pointer" href="https://github.com/DylanPina/neovim-config">neovim</a> btw</span>} animationDelay={1} animationDuration={1}/>
           </div>
         </div>
       </body>

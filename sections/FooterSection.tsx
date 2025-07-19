@@ -5,11 +5,12 @@ import gsap from "gsap";
 import { useEffect, useRef } from "react";
 
 interface Props {
+  text: React.ReactNode
   animationDelay?: number
   animationDuration?: number
 }
 
-const Footer: React.FC<Props> = ({ animationDelay, animationDuration }) => {
+const Footer: React.FC<Props> = ({ text, animationDelay, animationDuration }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -36,17 +37,10 @@ const Footer: React.FC<Props> = ({ animationDelay, animationDuration }) => {
   }, [animationDelay, animationDuration]);
 
   return (
-    <footer className="flex flex-col gap-4 md:gap-8 justify-center p-4 md:pb-[60px] pb-[120px] text-center mt-auto" ref={containerRef}>
+    <footer className="flex flex-col gap-4 md:gap-6 justify-center p-4 md:pb-[60px] pb-[120px] text-center mt-auto" ref={containerRef}>
       <SocialLinks animationDelay={animationDelay ?? 0} animationDuration={animationDuration ?? 0} />
       <div className="text-primary-white text-xs md:text-sm">
-        Developed in{" "}
-        <a
-          className="underline text-lavender hover:font-bold cursor-pointer"
-          href="https://github.com/DylanPina/neovim-config"
-        >
-          neovim
-        </a>{" "}
-        btw
+        {text}
       </div>
     </footer>
   );
