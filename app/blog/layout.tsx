@@ -6,6 +6,7 @@ import Header from "@/components/Header";
 import FooterSection from "@/sections/FooterSection";
 import Link from "next/link";
 import { FaHome } from "react-icons/fa";
+import { ProvideFilter } from "context/filter";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -31,7 +32,7 @@ const navLinks = [
 	{
 		url: "/",
 		text: "Portfolio",
-    svg: <FaHome />,
+		svg: <FaHome />,
 	},
 ];
 
@@ -49,9 +50,23 @@ export default function RootLayout({
 					<div className="selection:lavender flex flex-col min-h-screen">
 						<Header navLinks={navLinks} title={headerTitle} mobileNav={false} />
 						<main id="main" className="flex-1">
-							{children}
+							<ProvideFilter>{children}</ProvideFilter>
 						</main>
-						<FooterSection text={<span className="text-primary-white text-xs md:text-sm">Checkout my <a className="underline text-lavender hover:font-bold cursor-pointer" href="https://www.dylansp.dev">portfolio</a> </span>} animationDelay={0.1} animationDuration={0.5} />
+						<FooterSection
+							text={
+								<span className="text-primary-white text-xs md:text-sm">
+									Checkout my{" "}
+									<a
+										className="underline text-lavender hover:font-bold cursor-pointer"
+										href="https://www.dylansp.dev"
+									>
+										portfolio
+									</a>{" "}
+								</span>
+							}
+							animationDelay={0.1}
+							animationDuration={0.5}
+						/>
 					</div>
 				</div>
 			</body>
