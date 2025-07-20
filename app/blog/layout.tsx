@@ -54,15 +54,12 @@ export default function RootLayout({
 						</main>
 						<FooterSection
 							text={
-								<span className="text-primary-white text-xs md:text-sm">
-									Checkout my{" "}
-									<a
-										className="underline text-lavender hover:font-bold cursor-pointer"
-										href="https://www.dylansp.dev"
-									>
-										portfolio
-									</a>{" "}
-								</span>
+								<a
+									className="underline text-lavender hover:font-bold cursor-pointer"
+									href="https://www.dylansp.dev"
+								>
+									dylansp.dev
+								</a>
 							}
 							animationDelay={0.1}
 							animationDuration={0.5}
