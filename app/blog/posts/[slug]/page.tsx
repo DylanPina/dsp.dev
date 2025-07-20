@@ -1,8 +1,10 @@
 import { notFound } from "next/navigation";
 import fs from "fs";
 import path from "path";
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
+
+// Add import for CustomMarkdown
+import CustomMarkdown from "@/components/blog/CustomMarkdown";
+import Image from "next/image";
 
 interface Post {
 	slug: string;
@@ -12,6 +14,7 @@ interface Post {
 	content?: string;
 	markdown?: string;
 	markdownFile?: string;
+	bannerImage?: string; // Add bannerImage field
 }
 
 interface BlogPostPageProps {
@@ -92,6 +95,24 @@ async function getMarkdown(slug: string): Promise<string | null> {
 	}
 }
 
+async function getBannerImage(slug: string): Promise<string | null> {
+	try {
+		const bannerImage = path.join(
+			process.cwd(),
+			"public",
+			"blog",
+			"images",
+			"banners",
+			slug + "-banner.jpg"
+		);
+
+		return fs.existsSync(bannerImage) ? bannerImage : null;
+	} catch (error) {
+		console.error("Error reading banner image:", error);
+		return null;
+	}
+}
+
 const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
 	// Await the params promise
 	const resolvedParams = await params;
@@ -116,40 +137,46 @@ const BlogPostPage: React.FC<BlogPostPageProps> = async ({ params }) => {
 		notFound();
 	}
 
+	const bannerImage = await getBannerImage(resolvedParams.slug);
+
 	return (
 		<div className="bg-bglight dark:bg-bgdark min-h-screen">
-			<div className="px-4 sm:px-8 md:px-20 max-w-4xl mx-auto pt-20">
-				<header className="mb-8">
-					<h1 className="text-3xl md:text-4xl font-bold text-primary-white mb-4">
-						{post.title}
-					</h1>
-					<p className="text-subtext text-lg mb-4">{post.excerpt}</p>
-					<time className="text-secondary-text text-sm">
-						{new Date(post.datetime).toLocaleDateString("en-US", {
-							year: "numeric",
-							month: "long",
-							day: "numeric",
-							timeZone: "UTC",
-						})}
-					</time>
+			<div className="px-4 sm:px-8 md:px-20 max-w-5xl mx-auto pt-20 md:pt-24">
+				<header className="flex flex-col gap-4 w-full">
+					{bannerImage && (
+						<div className="w-full flex justify-center">
+							<Image
+								src={"/blog/images/banners/" + post.slug + "-banner.jpg"}
+								alt={post.title + " banner"}
+								width={900}
+								height={350}
+								className="rounded-lg shadow-md object-cover max-h-72 w-full"
+								priority
+							/>
+						</div>
+					)}
+					<div className="flex flex-col gap-3">
+						<h1 className="text-2xl md:text-4xl font-bold text-primary-white">
+							{post.title}
+						</h1>
+						<div className="flex items-center gap-1 text-secondary-text text-sm">
+							<span>Dylan Pina</span>
+							<span className="mx-1">&middot;</span>
+							<time>
+								{new Date(post.datetime).toLocaleDateString("en-US", {
+									year: "numeric",
+									month: "long",
+									day: "numeric",
+									timeZone: "UTC",
+								})}
+							</time>
+						</div>
+					</div>
 				</header>
+				<hr className="border-t border-secondary-text/30 my-4" />
 
 				<article className="prose prose-invert max-w-none">
-					{markdown && (
-						<ReactMarkdown
-							components={{
-								h1: ({ ...props }) => (
-									<h1
-										className="text-4xl font-bold text-indigo-600 my-4"
-										{...props}
-									/>
-								),
-							}}
-							remarkPlugins={[remarkGfm]}
-						>
-							{markdown}
-						</ReactMarkdown>
-					)}
+					{markdown && <CustomMarkdown markdown={markdown} />}
 				</article>
 			</div>
 		</div>

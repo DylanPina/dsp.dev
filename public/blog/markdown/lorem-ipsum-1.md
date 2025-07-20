@@ -1,4 +1,4 @@
-# Lorem Ipsum Dolor Sit Amet Consectetur
+# H1 test text
 
 ## Subtitle: Introduction
 
