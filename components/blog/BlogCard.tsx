@@ -19,7 +19,7 @@ const BlogCard: React.FC<Props> = ({ post }) => {
   const sectionRef = useRef<HTMLLIElement>(null);
 
   return (
-    <li ref={sectionRef} className="my-4 md:mt-0 md:mb-8">
+    <li ref={sectionRef} className="flex flex-col gap-2 my-4 md:mt-0 md:mb-8">
       <div className="overflow-hidden">
         <Link
           href={`/blog/posts/${slug}`}

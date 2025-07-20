@@ -1,0 +1,25 @@
+{
+  "posts": [
+    {
+      "slug": "lorem-ipsum-1",
+      "title": "Lorem ipsum dolor sit amet consectetur",
+      "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "datetime": "2024-01-15T14:30:00Z",
+      "markdownFile": "lorem-ipsum-1.md"
+    },
+    {
+      "slug": "lorem-ipsum-2",
+      "title": "Lorem ipsum dolor sit amet consectetur adipiscing",
+      "excerpt": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "datetime": "2024-01-20T10:15:00Z",
+      "markdownFile": "lorem-ipsum-2.md"
+    },
+    {
+      "slug": "lorem-ipsum-3",
+      "title": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed",
+      "excerpt": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      "datetime": "2024-01-25T16:45:00Z",
+      "markdownFile": "lorem-ipsum-3.md"
+    }
+  ]
+} 
