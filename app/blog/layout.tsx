@@ -36,6 +36,15 @@ const navLinks = [
 	},
 ];
 
+const footerText = (
+	<Link
+		href="/"
+		className="font-bold text-lavender hover:font-black hover:underline cursor-pointer"
+	>
+		dylansp.dev
+	</Link>
+);
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -53,14 +62,7 @@ export default function RootLayout({
 							<ProvideFilter>{children}</ProvideFilter>
 						</main>
 						<FooterSection
-							text={
-								<a
-									className="font-bold text-lavender hover:font-black hover:underline cursor-pointer"
-									href="https://www.dylansp.dev"
-								>
-									dylansp.dev
-								</a>
-							}
+							text={footerText}
 							animationDelay={0.1}
 							animationDuration={0.5}
 						/>

@@ -36,6 +36,19 @@ const headerTitle = (
 	</Link>
 );
 
+const footerText = (
+	<span className="text-primary-white text-xs md:text-sm">
+		Developed in{" "}
+		<a
+			className="underline text-lavender hover:font-bold cursor-pointer"
+			href="https://github.com/DylanPina/neovim-config"
+		>
+			neovim
+		</a>{" "}
+		btw
+	</span>
+);
+
 const navLinks = [
 	{
 		url: "/#about",
@@ -101,18 +114,7 @@ export default function Home() {
 							<ContactSection />
 						</main>
 						<FooterSection
-							text={
-								<span className="text-primary-white text-xs md:text-sm">
-									Developed in{" "}
-									<a
-										className="underline text-lavender hover:font-bold cursor-pointer"
-										href="https://github.com/DylanPina/neovim-config"
-									>
-										neovim
-									</a>{" "}
-									btw
-								</span>
-							}
+							text={footerText}
 							animationDelay={1}
 							animationDuration={1}
 							mobilePadding
