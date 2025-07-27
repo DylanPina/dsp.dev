@@ -20,12 +20,11 @@ const Blog: NextPage = () => {
 	useEffect(() => {
 		fetch("/blog/posts.json")
 			.then((res) => res.json())
-			.then((data) => setPosts(data.posts))
-			.then((data) => console.log(data));
+			.then((data) => setPosts(data.posts));
 	}, []);
 
 	const filteredPosts = posts.filter(({ title }) =>
-		title.toLowerCase().includes(searchText?.toLowerCase() ?? "")
+		title.toLowerCase().includes(searchText?.toLowerCase() ?? ""),
 	);
 
 	return (

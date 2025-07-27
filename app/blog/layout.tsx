@@ -55,7 +55,7 @@ export default function RootLayout({
 						<FooterSection
 							text={
 								<a
-									className="underline text-lavender hover:font-bold cursor-pointer"
+									className="font-bold text-lavender hover:font-black hover:underline cursor-pointer"
 									href="https://www.dylansp.dev"
 								>
 									dylansp.dev
