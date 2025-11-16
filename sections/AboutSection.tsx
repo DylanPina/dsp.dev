@@ -155,7 +155,7 @@ const educationInfo = [
 const workInfo = [
   {
     id: 1,
-    title: "Software Engineer",
+    title: "Software Engineer II",
     place: "Oracle Cloud | Austin, TX",
     time: "July 2024 - Present",
     bullets: [

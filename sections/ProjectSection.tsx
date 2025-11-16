@@ -9,7 +9,7 @@ import gsap from "gsap";
 import rucshub from "public/projects/rucshub.webp";
 import askanon from "public/projects/askanon.webp";
 import socketchat from "public/projects/socketchat.webp";
-import paxcoins from "public/projects/paxcoins.webp";
+import gitodyssey from "public/projects/git-odyssey.webp";
 import SectionHeader from "@/components/SectionHeader";
 
 const ProjectSection: React.FC = () => {
@@ -39,6 +39,25 @@ const ProjectSection: React.FC = () => {
 };
 
 const projects = [
+  {
+    title: "GitOdyssey",
+    type: "Fullstack",
+    image: (
+      <Image
+        src={gitodyssey}
+        sizes="100vw"
+        fill
+        alt="GitOdyssey"
+        className="transition-transform duration-500 rounded-lg hover:scale-110 "
+      />
+    ),
+    desc: "AI-driven Git analysis platform for semantic code search, contextual summarization, and citation-grounded LLM chat.",
+    tags: ["Python", "Typescript", "React", "PostgreSQL", "Langchain", "AWS", "Docker", "OpenAI"],
+    liveUrl: "https://www.gitodyssey.com",
+    codeUrl: "https://github.com/DylanPina/git-odyssey",
+    bgColor: "",
+    githubApi: "https://api.github.com/repos/DylanPina/GitOdyssey",
+  },
   {
     title: "RUCS Hub",
     type: "Fullstack",
@@ -93,6 +112,7 @@ const projects = [
       <Image
         src={socketchat}
         sizes="100vw"
+        fill
         alt="SocketChat"
         className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-110 object-cover"
       />
@@ -110,24 +130,6 @@ const projects = [
     codeUrl: "https://github.com/DylanPina/SocketChat",
     bgColor: "",
     githubApi: "https://api.github.com/repos/DylanPina/SocketChat",
-  },
-  {
-    title: "PaxCoins",
-    type: "Fullstack",
-    image: (
-      <Image
-        src={paxcoins}
-        sizes="100vw"
-        alt="PaxCoins"
-        className="transition-transform duration-500 h-75 outline outline-2 rounded-lg justify-center center m-auto hover:scale-110 object-cover"
-      />
-    ),
-    desc: "Crytocurrency analytics dashboard.",
-    tags: ["React", "Firebase", "Google Cloud"],
-    liveUrl: "https://github.com/DylanPina/PaxCoins",
-    codeUrl: "https://github.com/DylanPina/PaxCoins",
-    bgColor: "",
-    githubApi: "https://api.github.com/repos/DylanPina/PaxCoins",
   },
 ];
 
