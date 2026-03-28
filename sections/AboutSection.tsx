@@ -146,7 +146,6 @@ const educationInfo = [
     place: "Rutgers University New Brunswick",
     time: "2021 - 2024",
     bullets: [
-      "Graduated with honors",
       "Winner of the HackRU 2024 Hackathon education track",
     ],
   },
@@ -159,18 +158,23 @@ const workInfo = [
     place: "Oracle Cloud | Austin, TX",
     time: "July 2024 - Present",
     bullets: [
-      "Engineer on OCI Bastions, a tier 0 cloud security service enabling secure access to private cloud infrastructure through a zero trust architecture",
-      "Developed services for cloud security platforms and high-performance AI infrastructure",
+      "Designed and implemented a cloud-native LLM agent platform using the A2A protocol to automate critical SDLC workflows, including unit test generation, security vulnerability patching, and large-scale codebase migrations",
+      "Implemented RAG agents to assist on-call engineers, reducing mean time to resolution for operational incidents",
+      "Built an AI-powered coding assistant that reviews, validates, and provides automated feedback on pull requests",
+      "Built an MCP gateway service to securely host and manage Model Context Protocol (MCP) servers in the cloud",
+      "Developed cloud security microservices in Go with IaaC in Terraform and automated DevOps workflows in Python",
+      "Designed and scaled out a PySpark and Apache Kafka ETL pipeline ingesting GPU-cluster access and activity logs",
+      "Led a zero-downtime migration of Bastion servers from Oracle Linux 7 to Oracle Linux 9",
     ],
   },
   {
     id: 2,
     title: "Software Engineer Intern",
     place: "Oracle Cloud | Austin, TX",
-    time: "June 2023 - August 2023",
+    time: "May 2023 - August 2023",
     bullets: [
-      "Engineer on OCI Cloud Guard, building scalable systems for real-time threat detection, anomaly analysis, and automated remediation",
-      "Designed and developed ETL pipelines for automating security data warehouse migrations with integrated anomaly detection for pipeline monitoring",
+      "Designed and productionized a scalable ML data pipeline using Python, Airflow, and Spark to ingest, cleanse, and enrich cloud security telemetry for anomaly-detection models at multi-terabyte scale",
+      "Led a zero-downtime migration of 25+ TB of security findings into a lakehouse architecture with automated data-quality validation and Prometheus alerting, improving ML data reliability by 80%+",
     ],
   },
   {
@@ -179,8 +183,8 @@ const workInfo = [
     place: "Inovalon | Remote",
     time: "June 2022 - May 2023",
     bullets: [
-      "Led the design and development of a proprietary Angular UI component library along with multiple healthcare analytics API portals, enhancing frontend consistency and accelerating product development across teams",
-      "Developed an interactive healthcare data visualization platform using AWS and modern web technologies to deliver actionable insights to clinical and operational stakeholders",
+      "Spearheaded the architecture and implementation of components, services, and comprehensive documentation for a proprietary Angular UI component library, streamlining the development of several core products",
+      "Engineered a cloud-native developer portal for healthcare APIs using Angular, Java, AWS, and Okta OAuth2; delivered client demos, self-service docs, and real-time usage analytics, cutting client integration time by 50%",
     ],
   },
 ];
