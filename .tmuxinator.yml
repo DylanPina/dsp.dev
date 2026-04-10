@@ -1,0 +1,14 @@
+name: dspdev
+root: .
+
+windows:
+  - app:
+      layout: main-vertical
+      panes:
+        - npm run dev
+  - lazygit:
+      panes:
+        - lazygit
+  - ghostty:
+      panes:
+        - clear
